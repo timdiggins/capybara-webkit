@@ -10,8 +10,7 @@ env:
   global:
     - BUNDLE_JOBS=4
     - NOKOGIRI_USE_SYSTEM_LIBRARIES=true
-    - QMAKE=/usr/lib/x86_64-linux-gnu/qt4/bin/qmake
-    - "JRUBY_OPTS='--client -J-XX:+TieredCompilation -J-XX:TieredStopAtLevel=1 -Xcext.enabled=false -J-Xss2m -Xcompile.invokedynamic=false'"
+    - QMAKE=/usr/lib/x86_64-linux-gnu/qt5/bin/qmake
 addons:
   apt:
     sources:
@@ -22,5 +21,5 @@ addons:
 gemfile:
   - gemfiles/2.7.gemfile
 before_install:
-  - gem install -V bundler
+  - gem install bundler
 install: bundle
