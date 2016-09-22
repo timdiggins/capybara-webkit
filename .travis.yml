@@ -35,9 +35,9 @@ matrix:
       env: QMAKE=/usr/lib/x86_64-linux-gnu/qt5/bin/qmake
   allow_failures:
     - gemfile: gemfiles/master.gemfile
+    - rvm: jruby-19mode
 gemfile:
   - gemfiles/2.6.gemfile
   - gemfiles/2.5.gemfile
 before_install:
   - gem install -V bundler
-install: bundle
